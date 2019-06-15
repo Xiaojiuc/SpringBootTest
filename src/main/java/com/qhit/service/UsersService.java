@@ -12,6 +12,8 @@ import java.util.List;
 public interface UsersService {
     List<Users> selectUsers();
     void insertUsers(Users users);
+
     List<Users> selectUsersById(Integer id);
+
     List<Users> selectUsersByIdName(Users users);
 }
