@@ -3,20 +3,20 @@
 <mapper namespace="com.qhit.mapper.UsersMapping">
     <!-- 查詢 -->
     <select id="selectUsersAll" resultType="users">
-		select * from t_user
+		select * from test
 	</select>
 
     <!-- 查詢 -->
     <select id="selectUsersById" resultType="users" parameterType="Integer">
-		select * from t_user where id=#{id}
+		select * from test where id=#{id}
 	</select>
 
     <!-- 查詢 -->
     <select id="selectUsersByIdName" resultType="users" parameterType="users">
-		select * from t_user where id=#{id} and name=#{name}
+		select * from test where id=#{id} and name=#{name}
 	</select>
     <!--添加-->
     <insert id="insertUsers" parameterType="users">
-        insert into t_user(name,pass) values(#{name},#{pass})
+        insert into test(name,pass) values(#{name},#{pass})
     </insert>
 </mapper>

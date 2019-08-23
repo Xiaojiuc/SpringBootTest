@@ -32,6 +32,8 @@ public class UsersServiceImpl implements UsersService {
     public void insertUsers(Users users) {
         usersMapping.insertUsers(users);
     }
+
+
     @Override
     @Cacheable(value = "users",key = "#id")
     public List<Users> selectUsersById(Integer id) {
